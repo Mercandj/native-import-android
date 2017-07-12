@@ -6,10 +6,6 @@ import java.io.File;
 
 public class Library {
 
-    public Library() {
-
-    }
-
     public static void loadFromModule() {
         System.loadLibrary("log2");
     }
@@ -39,6 +35,4 @@ public class Library {
     public native String log();
 
     public static native String staticLog();
-
-
 }

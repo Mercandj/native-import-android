@@ -1,5 +1,6 @@
 package com.mercandalli.android.apps.nativeimport;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -61,6 +62,7 @@ public class MainActivity extends Activity {
         });
     }
 
+    @SuppressLint("SetTextI18n")
     private void log(String log) {
         TextView logTextView = findViewById(R.id.activity_main_log);
         logTextView.setText(log + "\n" + logTextView.getText().toString());
