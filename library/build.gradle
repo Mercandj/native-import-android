@@ -1,0 +1,32 @@
+apply plugin: 'com.android.model.library'
+
+model {
+    android {
+        compileSdkVersion 26
+        buildToolsVersion "26.0.0"
+
+        defaultConfig.with {
+            minSdkVersion.apiLevel 18
+            targetSdkVersion.apiLevel 26
+        }
+    }
+
+    android.sources {
+        main {
+            jniLibs {
+                dependencies {
+                    project ":librarynative"
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+}
+
+configurations {
+    // Expose the debug version of the library to other modules
+    debug
+    release
+}
