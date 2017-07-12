@@ -6,10 +6,9 @@ model {
     }
 
     android.ndk {
-        moduleName = "library"
-        ldLibs.addAll(["log", "android", "atomic"])
-        abiFilters.addAll(["armeabi", "armeabi-v7a", "x86"])
-        stl "stlport_static"
+        moduleName = "log2"
+        ldLibs.addAll(["log", "android", "GLESv2", "z"])
+        abiFilters.addAll(["armeabi", "armeabi-v7a", "mips", "x86"])
         cppFlags.addAll(["-std=c++11"])
         CFlags.addAll(["-std=c99"])
         platformVersion = 14
